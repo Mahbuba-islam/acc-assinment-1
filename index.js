@@ -10,10 +10,8 @@ const port = process.env.PORT || 5000
   
 viewCount()
 const userRoutes = require('./routes/v1/user.route.js')
-
-
-
-app.use('/api/user/all',userRoutes)
+        //    user route
+app.use('/user/all',userRoutes)
 
 app.all("*", (req, res)=>{
     res.send("no route found.")
